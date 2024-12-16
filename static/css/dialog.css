@@ -1,0 +1,566 @@
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+  
+.modal-content {
+    display: flex;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin: 50px auto;
+    border: 1px solid;
+    border-color: var(--setting-border-color);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 37);
+    width: 716px;
+    height: 600px;
+    overflow: auto;
+}
+
+.leftset {
+    width: 195px; /* Sol tarafın genişliği */
+    border-right: 1px solid; /* Sağdaki içeriği ayırmak için bir çizgi */
+    border-color: var(--setting-border-color);
+    overflow: auto; /* Gerekirse kaydırma */
+    padding: 0px 10px 10px 10px;
+}
+
+.account {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px 0 38px 0;
+    padding: 2px;
+}
+
+.account-img {
+    border-radius: 9999px;
+    height: 41px;
+    margin-right: 10px;
+}
+
+.rightset {
+    flex-grow: 1;
+    overflow: auto;
+    padding: 10px;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leftset ul {
+    list-style-type: none; /* Noktaları kaldır */
+    margin: 0; /* Varsayılan dış boşluğu kaldır */
+    cursor: default;
+}
+
+.leftset ul li.active {
+    background-color: #026affed; /* Mavi arka plan rengi */
+}
+
+ul {
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 50px 0 0 0;
+}
+
+li {
+    padding: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    margin: 2px 0 2px 0;
+}
+
+.setting-icons {
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 6px;
+}
+
+.macbtnw {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 10px;
+    gap: 8px;
+}
+  
+.macbtn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+  
+.macbtn:before, .macbtn:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+  
+.close-macbtn {
+    background: #FF5D5B;
+}
+  
+  /* Close btn */
+.close-macbtn:before, .close-macbtn:after {
+    width: 1px;
+    height: 70%;
+    background: #460100;
+}
+  
+  
+.close-macbtn:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+  
+.close-macbtn:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+  
+.macbtn:hover:before, .macbtn:hover:after {
+    top: 50%;
+    opacity: 0.8;
+}
+
+.min-btn {
+    background: #FFBB39;
+}
+  
+.max-btn {
+    background: #00CD4E;
+}
+
+.min-btn:before {
+    width: 70%;
+    height: 1px;
+    background: #460100;
+}
+  
+.max-btn:before {
+    width: 50%;
+    height: 50%;
+    background: #024D0F;
+}
+  
+.max-btn:after {
+    width: 2px;
+    height: 70%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #00CD4E;
+}
+
+.no-li {
+    padding: 10px !important;
+    line-height: 1.5;
+}
+
+.label-class-accent {
+    height: 15px;
+    width: 15px;
+}
+
+.extragapforappearancebtns {
+    gap: 11px;
+}
+
+
+  
+  
+.label-class-accent input {
+    position:relative;
+    opacity: 0;
+    margin-right: -17px;
+}
+
+.blue-btn {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #006cfe;
+    border-radius: 50%;
+    border: 1px solid #ffffff20;
+}
+.blue-btn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.label-class-accent .blue-btn:after {
+    top: 5px;
+    left: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+}
+.label-class-accent input:checked ~ .blue-btn {
+    background-color: #006cfe;
+}
+.label-class-accent input:checked ~ .blue-btn:after {
+    display: block;
+}
+  
+  
+.purple-btn {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #9e429d;
+    border-radius: 50%;
+    border: 1px solid #ffffff20;
+}
+.purple-btn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.label-class-accent .purple-btn:after {
+    top: 5px;
+    left: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+}
+.label-class-accent input:checked ~ .purple-btn {
+    background-color: #9e429d;
+}
+.label-class-accent input:checked ~ .purple-btn:after {
+    display: block;
+}
+  
+ 
+  
+.pink-btn {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #fd3b93;
+    border-radius: 50%;
+    border: 1px solid #ffffff20;
+}
+.pink-btn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.label-class-accent .pink-btn:after {
+    top: 5px;
+    left: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+}
+.label-class-accent input:checked ~ .pink-btn {
+    background-color: #fd3b93;
+}
+.label-class-accent input:checked ~ .pink-btn:after {
+    display: block;
+}
+
+  
+.red-btn {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #ff3f4e;
+    border-radius: 50%;
+    border: 1px solid #ffffff20;
+}
+.red-btn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.label-class-accent .red-btn:after {
+    top: 5px;
+    left: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+}
+.label-class-accent input:checked ~ .red-btn {
+    background-color: #ff3f4e;
+}
+.label-class-accent input:checked ~ .red-btn:after {
+    display: block;
+}
+
+  
+.orange-btn {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #fc731d;
+    border-radius: 50%;
+    border: 1px solid #ffffff20;
+}
+.orange-btn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.label-class-accent .orange-btn:after {
+    top: 5px;
+    left: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+}
+.label-class-accent input:checked ~ .orange-btn {
+    background-color: #fc731d;
+}
+.label-class-accent input:checked ~ .orange-btn:after {
+    display: block;
+}
+ 
+  
+.yellow-btn{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #ffbe10;
+    border-radius: 50%;
+    border: 1px solid #ffffff20;
+}
+.yellow-btn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.label-class-accent .yellow-btn:after {
+    top: 5px;
+    left: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+}
+.label-class-accent input:checked ~ .yellow-btn {
+    background-color: #ffbe10;;
+}
+.label-class-accent input:checked ~ .yellow-btn:after {
+    display: block;
+}
+
+  
+.green-btn {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #50b43e;
+    border-radius: 50%;
+    border: 1px solid #ffffff20;
+}
+.green-btn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.label-class-accent .green-btn:after {
+    top: 5px;
+    left: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+}
+.label-class-accent input:checked ~ .green-btn {
+    background-color: #50b43e;
+}
+.label-class-accent input:checked ~ .green-btn:after {
+    display: block;
+}
+
+
+
+.modal-content {
+    -webkit-user-select: none; /* Chrome, Safari, ve Opera için */
+    -moz-user-select: none; /* Firefox için */
+    -ms-user-select: none; /* Internet Explorer ve Edge için */
+    user-select: none; /* Standart syntax */
+}
+
+.modal-header {
+    width: 695px;
+    height: 50px;
+    margin-top: -10px;
+    display: flex;
+    position: absolute;
+    top: 10px;
+}
+
+.sys1 {
+    margin-top: 40px;
+    background-color: transparent;
+    height: auto;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-color: var(--setting-border-color);
+    border-radius: 5px;
+}
+
+.Subdad {
+    margin: 0;
+    padding: 0;
+}
+
+.Sub {
+    border-radius: 0px;
+    margin: 5px;
+    border-bottom: 1px solid;
+    border-color: var(--setting-border-color);
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.Subb {
+    border-radius: 0px;
+    margin: 5px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #026affed;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #026affed;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+  
+
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.search-container {
+    padding: 10px;
+    box-sizing: border-box;
+}
+  
+#searchInput {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.button-light {
+    display: inline-block;
+    width: 68px;
+    height: 45px;
+    border-radius: 7px;
+    border: 0px solid !important;
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/lightscreen.png);
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: default
+}
+
+.button-dark {
+    display: inline-block;
+    width: 68px;
+    height: 45px;
+    border-radius: 7px;
+    border: 0px solid !important;
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/darkscreen.png);
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: default
+}
+
+.button-auto {
+    display: inline-block;
+    width: 68px;
+    height: 45px;
+    border-radius: 7px;
+    border: 0px solid !important;
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/main/univacai/images/home/autoscreen.png);
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: default
+}
+
+select#Highlight {
+    background: transparent;
+    border: 0px;
+    color: var(--text-color);
+}

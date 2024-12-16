@@ -1,0 +1,191 @@
+#sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #181818;
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+
+.raunded-sm {
+    border-radius: 9999px;
+    color: transparent;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+.w-6 {
+    width: 1.5rem;
+}
+.h-6 {
+    height: 1.5rem;
+}
+.rounded-full {
+    border-radius: 9999px;
+}
+.w-1 {
+    width: 0.25rem;
+}
+.h-3 {
+    height: 0.75rem;
+}
+
+.profile {
+    background-color: transparent;
+    border-radius: 8px;
+    border: 0px solid transparent;
+    width: 230px;
+    height: auto;
+    align-items: center;
+    display: flex;
+    padding: 8px;
+    margin: 10px;
+    gap: 10px;
+    cursor: default;
+}
+
+.profile.active, .profile:hover {
+    background-color: #202123; /* Active ve hover durumları için arka plan rengi */
+}
+
+.user-info {
+    flex-direction: row !important;
+}
+
+.font-semibold {
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+}
+
+#sidebar a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 3px;
+}
+
+#sidebar a:hover {
+    color: rgb(255, 255, 255);
+    background-color: #026affed;
+    border-radius: 5px;
+}
+
+#sidebar .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+#content {
+    transition: margin-left .3s ease;
+}
+
+#content .open-btn {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateX(250px) translateY(-50%) rotate(0deg) translateZ(0px);
+    z-index: 40;
+    transition: transform 0.3s;
+    opacity: 0.5;
+}
+
+#content .open-btn:hover {
+    opacity: 0.8;
+}
+
+#content .open-btn.closed {
+    transform: translateX(0px) translateY(-50%) rotate(180deg) translateZ(0px);
+    background-color: transparent;
+}
+
+#content .open-btn.closed span {
+    transform: translateY(0.15rem) rotate(180deg) translateZ(0px);
+}
+
+#content .open-btn.closed span:before,
+#content .open-btn.closed span:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 1px;
+    padding: 0px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0px, 0px, 0px, 0px);
+    white-space: nowrap;
+    overflow-wrap: normal;
+}
+
+.open-btn {
+    background: transparent;
+    height: 72px;
+    width: 32px;
+    border: 0px solid transparent;
+}
+
+#tooltip {
+    position: absolute;
+    background-color: #1d1d1d;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    display: none;
+    font-size: 14px;
+}
+
+.tabs {
+    height: 44px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+div#dropdown-content {
+    background-color: #202123;
+    border-radius: 8px;
+    margin: -5px 10px 0px 10px;
+    z-index: 50;
+    display: none;
+    position: absolute;
+}
+
+.setting {
+    width: 210px;
+    height: auto;
+    line-height: 1.25;
+    padding: 10px;
+}
+
+a:-webkit-any-link {
+    cursor: default;
+}
+
+
+
+@media screen and (max-width: 1919px) {}
+
+@media screen and (max-width: 1199px) {}
+
+/* iPad ve iPhone 768px (e.g., veya daha azı) */
+@media screen and (max-width: 767px) {
+    #content {
+        display: none;
+    }
+}

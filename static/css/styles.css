@@ -1,0 +1,627 @@
+:root {
+    --background-color-dark: #171717;
+    --text-color-dark: #ececf1;
+    --border-color-dark: #d9d9e333;
+    --border-color-dark-active: #d9d9e340;
+    --setting-border-color-dark: #ffffff2e;
+    --text-quaternary-dark: white;
+
+
+    --background-color-light: #f3ecea;
+    --text-color-light: #0f0f0f;
+    --border-color-light:#8e8ea0;
+    --border-color-light-active: #7a7a8e;
+    --setting-border-color-light: #0000002e;
+    --text-quaternary-light: black;
+}
+
+.dark-mode {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+    --border-color: var(--border-color-dark);
+    --border-color-active: var(--border-color-dark-active);
+    --setting-border-color: var(--setting-border-color-dark);
+    --text-quaternary: var(--text-quaternary-dark);
+}
+  
+.light-mode {
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+    --border-color: var(--border-color-light);
+    --border-color-active: var(--border-color-light-active);
+    --setting-border-color: var(--setting-border-color-light);
+    --text-quaternary: var(--text-quaternary-light);
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.desktop {
+    inline-size: 100%;
+    block-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    overflow: auto;
+    padding: 0px;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    position: absolute;
+    border-radius: 0px;
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.container {
+    padding: 56px 28px 32px 28px;
+    width: 766px;
+    height: fit-content;
+}
+
+.fiber {
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage1.jpg);
+    inline-size: 100%;
+    block-size: 250px;
+    position: absolute;
+}
+
+.tv {
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage2.png);
+    inline-size: 100%;
+    block-size: 250px;
+    position: absolute;
+}
+
+.superbox {
+    background-image: url(https://raw.githubusercontent.com/oceandi/links/refs/heads/main/ISP/images/homepage3.jpg);
+    inline-size: 100%;
+    block-size: 250px;
+    position: absolute;
+}
+
+.destek {
+    background-image: url(https://github.com/oceandi/links/blob/main/ISP/images/google-dino.jpg);
+    inline-size: 100%;
+    block-size: 250px;
+    position: absolute;
+}
+
+.chat-box {
+    padding: 15px;
+    padding-left: 35px;
+    block-size: calc(100vh - 150px); /* Sayfa yüksekliğine bağlı olarak ayarlayın (form kontrol alanını da hesaba katar) */
+    overflow-y: auto;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-block-end: 10px;
+    line-height: 1.75;
+    z-index: 3;
+}
+
+/* Özel bir kaydırma çubuğu için genel stil tanımı */
+.chat-box::-webkit-scrollbar {
+    width: 8px; /* Kaydırma çubuğunun genişliği */
+    height: 16px;
+}
+
+/* Kaydırma çubuğunun parçası */
+.chat-box::-webkit-scrollbar-thumb {
+    background:hsla(0,0%,100%,.1); /* Kaydırıcı bölümünün arka plan rengi */
+    border-radius: 6px; /* Köşelerin yuvarlaklığı */
+}
+
+/* Kaydırma çubuğunun parçası fareyle üzerine gelindiğinde */
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background: hsla(0,0%,100%,.1); /* Kaydırıcı bölümünün arka plan rengi (hover durumu) */
+}
+
+/* Kaydırma çubuğu yuvası */
+.chat-box::-webkit-scrollbar-track {
+    background: transparent; /* Kaydırma yuvasının arka plan rengi */
+    border-radius: 6px; /* Köşelerin yuvarlaklığı */
+}
+
+.message-content p {
+    margin-block-start: 0px !important;
+}
+
+.ai-header {
+    margin-left: -36px;
+}
+
+.user-header {
+    margin-left: -34px;
+}
+
+.user-message {
+    text-align: start;
+    padding-inline-start: 0px;
+    border-radius: 15px;
+    color: var(--text-color);
+    border-radius: 15px;
+    white-space: pre-wrap;
+    margin-block-end: 50px;
+}
+
+.user-message p {
+    text-align: start;
+    padding-inline-start: 0px;
+    border-radius: 15px;
+    color: var(--text-color);
+    border-radius: 15px;
+    white-space: pre-wrap;
+    margin-block-end: 50px;
+}
+
+.bot-message {
+    text-align: start;
+    padding-inline-start: 0px;
+    border-radius: 15px;
+    color: var(--text-color);
+    border-radius: 15px;
+    white-space: pre-wrap;
+    margin-block-end: 50px;
+}
+
+.bot-message p {
+    text-align: start;
+    padding-inline-start: 0px;
+    border-radius: 15px;
+    color: var(--text-color);
+    border-radius: 15px;
+    white-space: pre-wrap;
+}
+
+.elips {
+    width: 24px;
+    height: 8px;
+    border: 2px solid;
+    border-color: var(--text-color);
+    border-radius: 50%;
+    transform: rotate(40deg); /* Elipsi eğik hale getir */
+    display: inline-block; /* Elipsi inline öğesi yapar */
+    margin-right: 8px; /* UnivacAI yazısından biraz boşluk bırak */
+    opacity: 0.8;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid;
+    border-color: var(--border-color);
+    border-radius: 16px;
+    transition: border-color 0.1s, background-color 0.1s; /* Geçiş efektlerini ekliyoruz */
+}
+
+.form-group:focus-within {
+    background-color: transparent;
+    color: var(--text-color);
+    border-color: var(--border-color-active);
+    outline: none;
+}
+
+.form-control::placeholder {
+    font-size: 16px;
+    line-height: 1.5rem; /* Varsayılan line-height değeri */
+    position: relative;
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+.form-control {
+    background-color: transparent;
+    border-radius: 0px;
+    border-width: 0px;
+    resize: none;
+    width: 100%;
+    block-size: 24px;
+    max-block-size: 192px;
+    padding-inline-start: 2px; 
+    padding-right: 12px;
+    overflow-y: auto;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    font-size: 16px;
+    flex-grow: 1;
+    color: var(--text-color);
+    line-height: 1.5rem;
+    margin: 14px;
+}
+
+textarea {
+    padding: 0px;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    flex-shrink: 0;
+    margin: auto;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.chat-input-container {
+    inline-size: 80%;
+    max-inline-size: 600px;
+}
+
+.chat-input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    border-radius: 22px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.chat-input {
+    border: none;
+    outline: none;
+    inline-size: 100%;
+    font-size: 16px;
+    margin-inline-start: 10px;
+}
+
+#send-btn {
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+  
+#send-btn svg {
+    width: 8px;
+    height: 8px;
+}
+
+.text-white {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+#send-btn.enabled {
+    background-color: rgba(255, 255, 255, 1); /* %100 opak beyaz */
+}
+  
+#send-btn.sent {
+    background-color: transparent;
+    color: var(--text-color);
+}
+  
+#send-btn.sent::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--text-color);
+}
+
+.btn-sm {
+    padding: 0px 0px 0px 14px;
+    font-size: 14px;
+    line-height: 0px;
+}
+  
+.btn-filled, .btn-filled:hover, .btn-filled:visited {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    opacity: 0.75;
+}
+  
+.btn-neutral.btn-filled {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    opacity: 0.75;
+}
+  
+.btn {
+    border: none;
+    border-radius: 8px;
+    transition: box-shadow .3s,background-color .3s,color .3s;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 500;
+    align-items: center;
+    position: relative;
+}
+
+.bg-black {
+    background-color: transparent;
+}
+
+.rounded-md {
+    border-radius: 0.375rem;
+}
+
+.flex {
+    display: flex;
+    border: 0 solid #d9d9e3;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #fff;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.gap-1 {
+    gap: 0.25rem;
+}
+
+.relative {
+    position: relative;
+}
+
+.text-gray-200 {
+    color: #c5c5d2;
+}
+
+.bg-gray-800 {
+    background-color: #171717;
+}
+
+.dark .bg-token-surface-primary {
+    background-color: #171717;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.font-sans {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.rounded-t-md {
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+}
+
+.p-4 {
+    padding: 0rem;
+    border-bottom-right-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.code {
+    font-family: Menlo, Monaco, 'Courier New', monospace !important;
+}
+
+.hljs {
+    font-size: 12px !important;
+    background: #1d1d1d !important;
+    color: #fff !important;
+    font-weight: 400 !important;
+    font-feature-settings: "liga" 0, "calt" 0 !important;
+    font-variation-settings: normal !important;
+    line-height: 18px !important;
+    letter-spacing: 0px !important;
+}
+
+pre {
+    margin-top: 10px !important;
+    margin-bottom: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    padding: 0px !important;
+}
+
+.prose :where(.prose>:first-child):not(:where([class~=not-prose] *)) {
+    margin-top: 0;
+}
+
+.prose :where(p):not(:where([class~=not-prose] *)) {
+    margin-bottom: 1.25em;
+    margin-top: 1.25em;
+}
+
+.hljs-string {
+    color:#ce9178 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-keyword {
+    color:#c586c0 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-title {
+    color:#dcdcaa !important;
+    font-weight: 400 !important;
+}
+
+.hljs-title function_ {
+    color: #dcdcaa  !important;
+    font-weight: 400 !important;
+}
+
+.hljs-title class_ {
+    color: #f22c3d !important;
+    font-weight: 400 !important;
+}
+
+.hljs-literal {
+    color: #569cd6 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-params {
+    color: #9cdcfe !important;
+    font-weight: 400 !important;
+}
+
+.hljs-built_in {
+    color: #dcdcaa !important;
+    font-weight: 400 !important;
+}
+
+.hljs-type {
+    color: #df3079 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-meta {
+    color: #dcdcaa !important
+}
+
+.hljs-attribute {
+    color: #9cdcfe !important;
+    font-weight: 400 !important;
+}
+
+.hljs-name {
+    color: #569cd6 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-selector-tag {
+    color: #808080 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-tag {
+    color: #808080 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-selector-class {
+    color: #d7ba7d !important;
+    font-weight: 400 !important;
+}
+
+.hljs-number {
+    color: #b5cea8 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-attr {
+    color: #9cdcfe !important;
+    font-weight: 400 !important;
+}
+
+.hljs-symbol {
+    color: #f22c3d !important;
+    font-weight: 400 !important;
+}
+
+.hljs-comment {
+    color: #6a9955 !important;
+    font-weight: 400 !important;
+}
+
+.hljs-variable language_ {
+    color: #9cdcfe !important;
+    font-weight: 400 !important;
+}
+
+.hljs-selector-id {
+    color: #d7ba7d !important;
+    font-weight: 400 !important;
+}
+
+.hljs-selector-tag {
+    color: #d7ba7d !important;
+    font-weight: 400 !important;
+}
+
+.hljs-selector-pseudo {
+    color: #d7ba7d !important;
+    font-weight: 400 !important;
+}
+
+
+
+/* Mac 1200px and 1919px */
+@media screen and (max-width: 1919px) {
+    .desktop {
+        /* Adjust styles for this screen size */
+    }
+    /* Add any additional styles for this screen size */
+}
+
+/* Macbook 768px and 1199px */
+@media screen and (max-width: 1199px) {
+    .container {
+        padding: 56px 28px 28px 28px;
+        width: 97%;
+        height: fit-content;
+    }
+}
+
+/* iPad ve iPhone 768px (e.g., veya daha azı) */
+@media screen and (max-width: 767px) {
+    .chat-box {
+        block-size: calc(100vh - 200px); /* Sayfa yüksekliğine bağlı olarak ayarlayın (form kontrol alanını da hesaba katar) */
+    }
+
+    .form-control {
+        margin: 10px;
+    }
+
+    .container {
+        padding: 56px 28px 16px 28px;
+    }
+
+    /* Add any additional styles for this screen size */
+}

@@ -1,0 +1,137 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex; /* Flexbox kullanarak divleri yanyana getirin */
+    height: 100%;
+}
+.left {
+    width: 60%; /* Yüzdelik genişlik */
+    background-image: url("https://raw.githubusercontent.com/oceandi/links/main/univacai/images/macbook/Macbook1.png");
+    background-color: #000;
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: contain;
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex; /* Flexbox kullanarak içerikleri ortalama */
+    flex-direction: column; /* İçeriği dikey bir sütun olarak düzenle */
+    justify-content: center; /* İçeriği dikey olarak ortalama */
+    height: 100%; /* Yüksekliği ana div ile aynı yap */
+}
+.right {
+    width: 40%; /* Yüzdelik genişlik */
+    background: rgba(0,0,0);
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex; /* Flexbox kullanarak içerikleri ortalama */
+    flex-direction: column; /* İçeriği dikey bir sütun olarak düzenle */
+    justify-content: center; /* İçeriği dikey olarak ortalama */
+    height: 100%; /* Yüksekliği ana div ile aynı yap */
+}
+.right button {
+    height: 48px;
+    width: 214px;
+    min-width: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3c46ff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.buttons {
+    display: flex;
+    justify-content: center; /* Butonları merkezde hizala */
+    gap: 5px; /* Butonlar arası boşluk */
+}
+.right button:hover {
+    background-color: #0056b3;
+}
+.right button:focus {
+    outline: none;
+}
+.get {
+    width: 80%; /* Yüzdelik genişlik */
+    background: rgba(0,0,0);
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex; /* Flexbox kullanarak içerikleri ortalama */
+    flex-direction: column; /* İçeriği dikey bir sütun olarak düzenle */
+    justify-content: center; /* İçeriği dikey olarak ortalama */
+    height: 80%; /* Yüksekliği ana div ile aynı yap */
+}
+.info {
+    width: 100%; /* Yüzdelik genişlik */
+    background: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex; /* Flexbox kullanarak içerikleri ortalama */
+    flex-direction: column; /* İçeriği dikey bir sütun olarak düzenle */
+    justify-content: center; /* İçeriği dikey olarak ortalama */
+    height: 20%; /* Yüksekliği ana div ile aynı yap */
+}
+.univac {
+    width: 40%; /* Yüzdelik genişlik */
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex; /* Flexbox kullanarak içerikleri ortalama */
+    flex-direction: column; /* İçeriği dikey bir sütun olarak düzenle */
+    justify-content: center; /* İçeriği dikey olarak ortalama */
+    height: 50%; /* Yüksekliği ana div ile aynı yap */
+}
+img {
+    opacity: 0.5;
+}
+.policy a {
+    color: aliceblue;
+    font-size: 12px;
+    text-decoration: underline;
+    opacity: 0.5;
+}
+#login, #signup {
+    opacity: 1;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.text-gray-600 {
+    font-size: 12px;
+    opacity: 0.5;
+}
+@media screen and (max-width: 1199px) {
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+@media screen and (max-width: 767px) {
+    .left {
+        width: 0%;
+    }
+    .right {
+        width: 100%;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+
+    .right button {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .get {
+        width: 90%;
+    }
+}

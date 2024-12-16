@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnivacAI</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/oceandi/links/main/univacai/images/logo/logo01.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="left"></div>
+        <div class="right">
+            <div class="get">
+                <h2>Get started</h2>
+                <div class="buttons">
+                    <a href="{{ url_for('auth0_login') }}">
+                        <button id="login">Log in</button>
+                    </a>
+                    <a href="{{ url_for('auth0_login') }}">
+                        <button id="signup">Sign up</button>
+                    </a>
+                </div>
+            </div>
+            <div class="info">
+                <div class="univac">
+                    <img src="https://raw.githubusercontent.com/oceandi/links/main/univacai/images/logo/vn.png">
+                </div>
+                <div class="policy">
+                    <a rel="noreferrer" class="cursor-pointer font-normal underline" target="_blank" href="https://www.univacai.com/static/policies/terms.html">Terms of use</a>
+                    <span class="text-gray-600">|</span>
+                    <a rel="noreferrer" class="cursor-pointer font-normal underline" target="_blank" href="https://www.univacai.com/static/policies/privacy.html">Privacy policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('login').addEventListener('click', function() {
+        });
+
+        document.getElementById('signup').addEventListener('click', function() {
+        });
+    </script>
+</body>
+</html>
